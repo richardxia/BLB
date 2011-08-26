@@ -1,1 +1,8 @@
-TODO
+Will flesh out this document later. 
+
+BLB.py contains the BLB class that all subclasses should inherit from.
+Subclasses will specific specific reducing functions for each loop of the
+algorithm.
+
+run_test.py has sample implementations for mean and standard deviations and
+executes them on a list of 10000 items.
