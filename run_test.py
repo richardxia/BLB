@@ -56,16 +56,16 @@ data = range(10000)
 
 blb = MeanMean_BLB()
 result = blb.run(data)
-print "Mean of Mean: ", result
+print ("Mean of Mean: ", result)
 
 blb = SDMean_BLB()
 result = blb.run(data)
-print "SD of Mean: ", result
+print ("SD of Mean: ", result)
 
 blb = MeanSD_BLB()
 result = blb.run(data)
-print "Mean of SD: ", result
+print ("Mean of SD: ", result)
 
 blb = SDSD_BLB()
 result = blb.run(data)
-print "SD of SD: ", result
+print ("SD of SD: ", result)

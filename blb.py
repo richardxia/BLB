@@ -15,15 +15,14 @@ class BLB:
         subsample_estimates = []
         for i in range(self.num_subsamples):
             subsample = self.__subsample(data, self.subsample_len_exp)
-            bootstrap_estimates = []
+            bootstrap_estimates = [] 
             for j in range(self.num_bootstraps):
                 bootstrap = self.__bootstrap(subsample)
                 estimate = self.compute_estimate(bootstrap)
                 bootstrap_estimates.append(estimate)
             subsample_estimates.append(self.reduce_bootstraps(bootstrap_estimates))
-
         return self.average(subsample_estimates)
-
+    
     def __subsample(self, data, subsample_len_exp):
         subsample_len = int(len(data) ** subsample_len_exp)
         subsample = random.sample(data, subsample_len)
